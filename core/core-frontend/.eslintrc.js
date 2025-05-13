@@ -24,6 +24,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
+    'prettier/prettier': 'off',
     '@typescript-eslint/ban-types': [
       'error',
       {
