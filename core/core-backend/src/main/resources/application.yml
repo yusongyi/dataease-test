@@ -8,6 +8,10 @@ spring:
     active: '@profiles.active@'
   application:
     name: core-backend
+  servlet:
+    multipart:
+      max-file-size:  100MB
+      max-request-size: 100MB
   messages:
     encoding: UTF-8
   main:
@@ -36,9 +40,9 @@ logging:
   file:
     path: /opt/dataease2.0/logs/dataease
 # sql日志生产环境注释掉
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 quartz:
   enabled: true
