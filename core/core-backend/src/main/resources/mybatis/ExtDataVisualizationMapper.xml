@@ -464,7 +464,7 @@
     </select>
 
     <delete id="deleteDataVBatch">
-        DELETE
+        DELETE dvi
         FROM
          <choose>
             <when test="resourceTable == 'snapshot'">
@@ -481,7 +481,7 @@
             </foreach>
     </delete>
     <delete id="deleteViewsBatch">
-        DELETE
+        DELETE ccv
         FROM
         <choose>
            <when test="resourceTable == 'snapshot'">

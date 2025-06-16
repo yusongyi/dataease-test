@@ -94,7 +94,8 @@
   </select>
 
     <delete id="deleteOuterParamsTargetWithVisualizationId" >
-        DELETE FROM
+        DELETE poptvi
+        FROM
             visualization_outer_params_target_view_info poptvi
         WHERE
             poptvi.params_info_id IN (
@@ -110,7 +111,8 @@
     </delete>
 
     <delete id="deleteOuterParamsInfoWithVisualizationId" >
-        DELETE FROM
+        DELETE popi
+        FROM
             visualization_outer_params_info popi
         WHERE
             popi.params_id IN (
@@ -134,7 +136,8 @@
 
 
     <delete id="deleteOuterParamsTargetWithVisualizationIdSnapshot" >
-        DELETE FROM
+        DELETE poptvi
+        FROM
             snapshot_visualization_outer_params_target_view_info poptvi
         WHERE
             poptvi.params_info_id IN (
@@ -150,7 +153,8 @@
     </delete>
 
     <delete id="deleteOuterParamsInfoWithVisualizationIdSnapshot" >
-        DELETE FROM
+        DELETE popi
+        FROM
             snapshot_visualization_outer_params_info popi
         WHERE
             popi.params_id IN (
