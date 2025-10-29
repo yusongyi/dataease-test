@@ -22,6 +22,11 @@ public class CoreDatasetGroup implements Serializable {
     private Long id;
 
     /**
+     * 企业ID
+     */
+    private Long enterpriseId;
+
+    /**
      * 名称
      */
     private String name;
@@ -222,6 +227,14 @@ public class CoreDatasetGroup implements Serializable {
 
     public void setIsCross(Boolean isCross) {
         this.isCross = isCross;
+    }
+
+    public Long getEnterpriseId() {
+        return enterpriseId;
+    }
+
+    public void setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
     }
 
     @Override

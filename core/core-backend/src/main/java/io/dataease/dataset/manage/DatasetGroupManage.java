@@ -236,6 +236,10 @@ public class DatasetGroupManage {
         if (ObjectUtils.isNotEmpty(request.getLeaf())) {
             queryWrapper.eq("node_type", request.getLeaf() ? "dataset" : "folder");
         }
+
+        if(request.getEnterpriseId() != null)
+            queryWrapper.eq("enterprise_id", request.getEnterpriseId());
+
         String info = CommunityUtils.getInfo();
         if (StringUtils.isNotBlank(info)) {
             queryWrapper.notExists(String.format(info, "core_dataset_group.id"));

@@ -30,4 +30,6 @@ public class DatasetGroupInfoDTO extends DatasetNodeDTO {
     private String updater;
 
     private Boolean isCross;
+
+    private Long enterpriseId;
 }
