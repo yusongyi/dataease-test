@@ -94,6 +94,9 @@ public class CoreDatasource implements Serializable {
      */
     private Boolean enableDataFill;
 
+    //    企业id
+    private Long enterpriseId;
+
     public Long getId() {
         return id;
     }
@@ -212,6 +215,14 @@ public class CoreDatasource implements Serializable {
 
     public void setEnableDataFill(Boolean enableDataFill) {
         this.enableDataFill = enableDataFill;
+    }
+
+    public Long getEnterpriseId() {
+        return enterpriseId;
+    }
+
+    public void setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
     }
 
     @Override

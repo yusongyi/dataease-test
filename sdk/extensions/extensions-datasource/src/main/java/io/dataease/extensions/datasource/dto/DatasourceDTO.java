@@ -93,4 +93,7 @@ public class DatasourceDTO implements Serializable {
     private Boolean enableDataFill;
 
     private int dsVersion = -1;
+
+//    企业id
+    private Long enterpriseId;
 }

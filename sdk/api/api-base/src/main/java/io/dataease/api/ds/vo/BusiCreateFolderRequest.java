@@ -27,4 +27,5 @@ public class BusiCreateFolderRequest implements Serializable {
     @Schema(description = "操作类型", requiredMode = Schema.RequiredMode.REQUIRED)
     private String  action;
 
+    private Long enterpriseId;
 }

@@ -50,4 +50,5 @@ public class BusiDsRequest implements Serializable {
     private String qrtzInstance;
     private String taskStatus;
     private Boolean enableDataFill;
+    private Long enterpriseId;
 }

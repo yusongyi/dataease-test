@@ -100,6 +100,12 @@ public class DataSourceManage {
         if (StringUtils.isNotBlank(info)) {
             queryWrapper.notExists(String.format(info, "core_datasource.id"));
         }
+
+        Long currentEnterpriseId = request.getEnterpriseId();
+        if (currentEnterpriseId != null) {
+            queryWrapper.eq("enterprise_id", currentEnterpriseId);
+        }
+
         queryWrapper.orderByDesc("create_time");
         List<DatasourceNodeBO> nodes = new ArrayList<>();
         List<DataSourceNodePO> pos = dataSourceExtMapper.selectList(queryWrapper);

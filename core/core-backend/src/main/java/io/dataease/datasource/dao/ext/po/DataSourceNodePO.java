@@ -15,6 +15,8 @@ public class DataSourceNodePO implements Serializable {
 
     private Long pid;
 
+    private Long enterpriseId;
+
     private String name;
 
     private String type;

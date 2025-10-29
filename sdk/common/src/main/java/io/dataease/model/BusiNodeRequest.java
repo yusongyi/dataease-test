@@ -22,4 +22,6 @@ public class BusiNodeRequest implements Serializable {
     private String sortType;
 
     private String resourceTable;
+
+    private Long enterpriseId;
 }
