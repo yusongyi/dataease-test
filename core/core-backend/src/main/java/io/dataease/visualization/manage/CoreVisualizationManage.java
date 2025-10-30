@@ -85,6 +85,11 @@ public class CoreVisualizationManage {
         if (StringUtils.isNotBlank(info)) {
             queryWrapper.notExists(String.format(info, "data_visualization_info.id"));
         }
+
+        if(request.getEnterpriseId() != null){
+            queryWrapper.eq("enterprise_id", request.getEnterpriseId());
+        }
+
         // 如果是编辑界面 只展示已发布的资源
         if(CommonConstants.RESOURCE_TABLE.SNAPSHOT.equals(request.getResourceTable())){
             queryWrapper.in("status", Arrays.asList(1,2));
