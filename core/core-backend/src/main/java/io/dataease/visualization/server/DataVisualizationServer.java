@@ -969,6 +969,10 @@ public class DataVisualizationServer implements DataVisualizationApi {
         if (AuthUtils.getUser().getDefaultOid() != null) {
             wrapper.eq("org_id", AuthUtils.getUser().getDefaultOid());
         }
+
+        if(request.getEnterpriseId() != null)
+            wrapper.eq("enterprise_id", request.getEnterpriseId());
+
         List<DataVisualizationInfo> existList = visualizationInfoMapper.selectList(wrapper);
         if (CollectionUtils.isNotEmpty(existList) && existList.stream().anyMatch(item -> item.getName().equals(request.getName().trim()))) {
             DEException.throwException("当前名称已经存在");
