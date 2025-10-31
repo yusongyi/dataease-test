@@ -591,6 +591,7 @@ public class DataVisualizationServer implements DataVisualizationApi {
         visualizationInfo.setId(dvId);
         visualizationInfo.setName(request.getName());
         visualizationInfo.setStatus(request.getStatus());
+        visualizationInfo.setEnterpriseId(request.getEnterpriseId());
         coreVisualizationManage.innerEdit(visualizationInfo);
         if (CommonConstants.DV_STATUS.PUBLISHED == request.getStatus()) {
             coreVisualizationManage.removeDvCore(dvId);

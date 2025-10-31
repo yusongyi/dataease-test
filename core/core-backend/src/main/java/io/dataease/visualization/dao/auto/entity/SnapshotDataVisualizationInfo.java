@@ -21,6 +21,8 @@ public class SnapshotDataVisualizationInfo implements Serializable {
      */
     private Long id;
 
+    private Long enterpriseId;
+
     /**
      * 名称
      */
@@ -339,6 +341,14 @@ public class SnapshotDataVisualizationInfo implements Serializable {
 
     public void setCheckVersion(String checkVersion) {
         this.checkVersion = checkVersion;
+    }
+
+    public Long getEnterpriseId() {
+        return enterpriseId;
+    }
+
+    public void setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
     }
 
     @Override

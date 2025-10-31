@@ -870,6 +870,7 @@
     <insert id="restoreDataV">
        INSERT INTO data_visualization_info (
        	`id`,
+       	`enterprise_id`,
        	`name`,
        	`pid`,
        	`org_id`,
@@ -896,6 +897,7 @@
        	`check_version`
        ) SELECT
        `id`,
+       `enterprise_id`,
        `name`,
        `pid`,
        `org_id`,
